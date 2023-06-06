@@ -1,0 +1,15 @@
+1: Created account:
+	User: roman
+	pass : Ignou@555355
+	url: https://app.snowflake.com/ap-southeast-1/ze27408/worksheets
+	
+	Snowsql:
+	Install Snowsql client:
+
+Configure it:
+cd .\.snowsql\
+make configuration in config file
+cd ..
+type command "snowsql"
+
+select current_version();	
