@@ -1,0 +1,75 @@
+1. When to use a tuple vs list 
+
+Q. What is Lambda Functions in Python?
+Ans> A Lambda Function is a small anonymous function.
+ A lambda function can take any number of arguments, but can only have one expression.
+ x = lambda a : a + 10
+print(x(5)) # Output: 15
+
+Q: What is a Negative Index in Python?
+
+Q: What is a ‘match-case’ statement?
+This Match-Case is the Switch Case of Python which was introduced in Python 3.10.
+ Here we have to first pass a parameter then try to check with which case the parameter is getting satisfied
+ def f(x):
+    match x:
+        case 'a':
+            return 1
+        case 'b':
+            return 2
+
+Q: Explain Decorators in Python?
+In Python, functions are the first-class objects, which means that:
+
+Functions are objects; they can be referenced to, passed to a variable, and returned from other functions as well.
+
+Functions can be defined inside another function and can also be passed as arguments to another function.
+
+Now:
+
+Decorators allow us to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it.
+
+Decorators are a very powerful and useful tool in Python since it allows programmers to modify the behavior of a function or class.
+
+Q: Explain the difference between lists and tuples ?
+
+Apart from tuples being immutable, 
+there is also a semantic distinction that should guide their usage. 
+Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences. 
+Tuples have structure, and lists have been ordered.
+
+Q: What's the difference between the list methods append() and extend()?
+
+Q: How to define static methods in python
+
+Q: Explain the difference between @staticmethod and @classmethod?
+
+Q:What is GIL?
+Python has a construct called the Global Interpreter Lock (GIL).
+
+The GIL makes sure that only one of your threads can execute at any one time. A thread acquires the GIL, does a little work,
+ then passes the GIL onto the next thread. This happens very quickly so to the human eye it may seem like 
+ your threads are executing in parallel, but they are really just taking turns using the same CPU core. 
+ All this GIL passing adds overhead to execution.
+
+ Q: How to read a very large file in Python?
+ for line in open("log.txt"):
+    do_something_with(line)
+
+Even better is using context manager in recent Python versions.
+with open("log.txt") as fileobject:
+    for line in fileobject:
+        do_something_with(line)
+
+Q: What are global, protected and private attributes in Python?
+Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+Protected attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+Private attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+
+Q: What is slicing in Python?
+Syntax for slicing is [start : stop : step]
+
+Q: What are Dict and List comprehensions?
+Q: What is the use of help() and dir() functions?
+help() function in Python is used to display the documentation of modules, classes, functions, keywords, etc. If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
+dir() function tries to return a valid list of attributes and methods of the object it is called upon. It behaves differently with different objects, as it aims to produce the most relevant data, rather than the complete information.
