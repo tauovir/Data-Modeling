@@ -26,4 +26,17 @@ on sal.empcode = emp.empcode
 left join  public."DEPARTMENT" as dpt on dpt.deptcode = emp.deptcode
 group by dpt.deptname order by total desc
 
---
+-- find second largest salary of employee
+
+select * from(
+SELECT *,
+DENSE_RANK() OVER (ORDER BY emp.total DESC) as rnk
+FROM (
+SELECT emp.empcode,emp.empfname, emp.emplname,
+SUM(sal.basic + sal.additions - sal.deductions) OVER (PARTITION BY emp.empcode) total
+from public."SALARY" as sal 
+left join public."EMPLOYEE" as emp
+on sal.empcode = emp.empcode
+) emp
+) fn
+where rnk =2

@@ -1,0 +1,38 @@
+window functions:
+
+A window function performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate function. But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities. Behind the scenes, the window function is able to access more than just the current row of the query result.
+
+SUM() OVER (<PARTITIONED BY> <ORDER BY>)
+COUNT() OVER(<PARTITIONED BY> <ORDER BY>)
+AVG() OVER(<PARTITIONED BY> <ORDER BY>)
+ ROW_NUMBER() OVER(<PARTITIONED BY> <ORDER BY>)
+ RANK() OVER (<PARTITIONED BY> <ORDER BY>)
+ NTILE(5) OVER(<PARTITIONED BY> <ORDER BY>)
+
+Example:
+1. Standard Aggregate function
+
+SELECT emp.empcode, SUM(sal.basic + sal.additions - sal.deductions)
+from public."SALARY" as sal left join public."EMPLOYEE" as emp
+on sal.empcode = emp.empcode
+group by emp.empcode
+
+2. Window function
+
+SELECT emp.empcode,emp.empfname, emp.emplname,
+SUM(sal.basic + sal.additions - sal.deductions) OVER (PARTITION BY emp.empcode)
+from public."SALARY" as sal left join public."EMPLOYEE" as emp
+on sal.empcode = emp.empcode
+
+NOte: You can see that the above query creates an aggregation () without using GROUP BY
+
+SELECT emp.empcode,emp.empfname, emp.emplname,
+SUM(sal.basic + sal.additions - sal.deductions) OVER (PARTITION BY emp.empcode),
+COUNT(sal.basic) OVER
+         (PARTITION BY emp.empcode) AS running_count,
+AVG(sal.basic) OVER
+ (PARTITION BY emp.empcode) AS running_avg,
+DENSE_RANK() OVER (PARTITION BY emp.empcode) as rnk
+
+from public."SALARY" as sal left join public."EMPLOYEE" as emp
+on sal.empcode = emp.empcode
