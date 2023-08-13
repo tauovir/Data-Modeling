@@ -73,3 +73,20 @@ Q: What are Dict and List comprehensions?
 Q: What is the use of help() and dir() functions?
 help() function in Python is used to display the documentation of modules, classes, functions, keywords, etc. If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
 dir() function tries to return a valid list of attributes and methods of the object it is called upon. It behaves differently with different objects, as it aims to produce the most relevant data, rather than the complete information.
+
+What are the basic concepts of OOPs?
+Inheritance
+Encapsulation
+Polymorphism
+Abstraction
+
+Higher Order Function:
+A function in Python with another function as an argument or returns a function as an output is called the High order function. Let’s see the propertie −
+
+The function can be stored in a variable.
+
+The function can be passed as a parameter to another function.
+
+The high order functions can be stored in the form of lists, hash tables, etc.
+
+Function can be returned from a function.

@@ -1,5 +1,4 @@
 
-
 class Matrix:
 
     def __init__(self):
@@ -14,9 +13,9 @@ class Matrix:
         pass
 
     def row_addtion(self):
+        # list comprehension
         # output:[6, 15, 24]
         pass
-
 
     def col_addtion(self):
         # output: [12, 15, 18]
@@ -25,7 +24,6 @@ class Matrix:
     def row_reverse(self):
         # Result: [[3, 2, 1], [6, 5, 4], [9, 8, 7]]
         pass
-
 
 if __name__ == "__main__":
     obj = Matrix()

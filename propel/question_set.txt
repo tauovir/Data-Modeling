@@ -1,0 +1,34 @@
+#PYTHON
+When to use a tuple vs list vs dictionary in Python?
+What is Lambda Functions in Python?
+What is a Negative Index in Python?
+What is docstring in Python?
+What are negative indexes and why are they used?
+Why would you use the pass statement ?
+What's the difference between the list methods append() and extend()?
+How to read a very large file in Python?
+What is Higher Order function.
+Iterators and Generators in Python  # https://www.codingninjas.com/studio/library/iterators-and-generators-in-python
+What are Python Modules and packages:
+What is scope resolution?
+ What is __init__ in Python?
+ What is a map and filter function in Python?
+
+ What are Dict and List comprehensions?
+ What does *args and **kwargs mean in Python?
+ What is slicing in Python?
+ What Is the Difference Between Del and Remove() on Lists
+ HOw to Create Private member in Python.
+
+ #PYSPARK
+ What is PySpark?
+ What is the difference between RDD, DataFrame, and Dataset in PySpark?
+What is Temporary table in PySpark
+Explain Map() vs flatMap()?
+Explain StructType & StructField
+Whats is Transformation.
+How to select column for DataFrame
+What is UDF. How can we create.
+How can we join two Dataframe.
+
+#

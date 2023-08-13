@@ -1,0 +1,95 @@
+#What is the difference between RDD, DataFrame, and Dataset in PySpark?
+
+Resilient Distributed Datasets is a basic data structure in PySpark.
+ It represents a distributed collection of objects. 
+ The Dataset is a high-level abstraction that provides a more organized way of manipulating data. 
+ DataFrame is a collection of data organized into named columns.
+
+#What is lazy evaluation in PySpark?
+Lazy evaluation is a feature in PySpark that defers the execution of code until it is needed. 
+This is used to optimize the performance of PySpark by decreasing the amount of data 
+that needs to be processed.
+
+#What is a transformation in PySpark?
+A transformation is an operation that takes one RDD as input and produces another RDD as output. 
+Some examples of transformations are map(), filter(), and groupBy().
+
+#What is an action in PySpark?
+An action is an operation in Pyspark that triggers the execution of transformations and produces a result. 
+Some examples of actions in pyspark are count(), collect(), and saveAsTextFile().
+
+#How do you handle missing data in PySpark?
+Missing data can be handled using the dropna() function to drop rows with missing values. 
+We can also handle it by filling in missing values using the fillna() function.
+
+#How do you optimize PySpark performance?
+PySpark performance can be optimized by using lazy evaluation, reducing data shuffling. 
+It can also be optimized using the appropriate data structure for the job, for example, RDDs,
+ DataFrames, or Datasets.
+ 
+#What is a SparkSession and why is it important?
+A SparkSession is the entry point to PySpark. It provides a way to create DataFrames and Datasets. It handles all the configuration and initialization of the Spark runtime. 
+A SparkSession is required for creating a DataFrame or Dataset in PySpark.
+
+#How do you cache data in PySpark, and what are the benefits of caching?
+You can cache data in PySpark using the cache() method. Caching can improve performance by reducing the times data needs to be read from disk. 
+Caching can also consume a lot of memory, so it should be used carefully.
+
+#How does PySpark handle partitioning, and what is the significance of partitioning?
+Partitioning is dividing data into smaller and manageable chunks called partitions. 
+PySpark can automatically partition data when it reads or create.
+It can also be repartitioned using the repartition() or coalesce() methods. 
+Partitioning is important because it affects the parallelism and efficiency of data processing in PySpark.
+
+#What is a UDF, and how is it used in PySpark?
+User Defined Function is a type of function that is defined by the user and can be used to process data in PySpark. 
+UDFs can be used in PySpark to perform complex data transformations which are not supported by built-in functions.
+
+#What is the difference between map() and flatMap() in PySpark?
+The map() method in PySpark is used to implement a function to the elements of an RDD or DataFrame. 
+The flatMap() method is almost similar to the map() but can return multiple elements for each input element.
+
+#What is a pipeline, and how is it used in PySpark?
+A pipeline in PySpark is a series of data processing stages executed in a specific order. Pipelines can be used to process data efficiently. 
+It can be optimized to minimize data movement and maximize parallelism.
+
+#What is a checkpoint, and how is it used in PySpark?
+A checkpoint is a method for storing data to disk during data processing. Checkpoints can improve fault tolerance and optimize data processing. 
+It reduces the data that is required to be recomputed in case of failure.
+
+#What do you understand about the PySpark DAGScheduler?
+
+#What do you understand by shared variables in PySpark?
+
+#what is temporary table in pyspark
+Temporary tables in PySpark are session-scoped and will be dropped when the session terminates.
+
+#Explain the basic architecture of PySpark.
+The basic architecture of PySpark consists of the following components:
+
+Driver Program: Coordinates and manages the application, running the main function and defining one or more RDDs.
+Cluster Manager: Allocates resources and manages the distribution of tasks across the cluster. Examples include YARN, Mesos, and Standalone.
+Executor: Runs tasks on worker nodes and stores the data in memory or disk.
+Worker Node: Hosts executor processes, which perform data processing tasks.
+
+#What is RDD, and what are its core operations?
+Resilient Distributed Dataset (RDD) is a fundamental data structure in PySpark, representing an immutable, distributed collection of objects. RDDs can be processed in parallel across a cluster. Core operations of RDDs include:
+
+Transformations: Operations that create a new RDD from an existing one, such as map(), filter(),
+ and groupByKey().
+Actions: Operations that return a value to the driver program or write data to an external storage system, such as count(), reduce(), and saveAsTextFile().
+
+#Difference between Spark and MapReduce?
+MapReduce: MapReduce is I/O intensive read from and writes to disk. It is batch processing. MapReduce is written in java only.
+It is not iterative and interactive. MapReduce can process larger sets of data compared to spark.
+
+Spark: Spark is a lighting-fast in-memory computing process engine, 100 times faster than MapReduce,
+ 10 times faster to disk. Spark supports languages like Scala, Python, R, and Java.
+ Spark Processes both batch as well as Real-Time data.
+
+# What are the components/modules of Apache Spark?
+Spark Core
+Spark SQL
+Spark Streaming
+MLib
+GraphX

@@ -1,0 +1,44 @@
+Q: What are Constraints in SQL?
+Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:
+
+NOT NULL - Restricts NULL value from being inserted into a column.
+CHECK - Verifies that all values in a field satisfy a condition.
+DEFAULT - Automatically assigns a default value if no value has been specified for the field.
+UNIQUE - Ensures unique values to be inserted into the field.
+INDEX - Indexes a field providing faster retrieval of records.
+PRIMARY KEY - Uniquely identifies each record in a table.
+FOREIGN KEY - Ensures referential integrity for a record in another table
+
+ Q: What is a Join? 
+ How inner Join and LEFT (OUTER) JOIN  work.
+ 
+  Q: What is a Self-Join?
+  A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s).
+   Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.
+
+Q: What is an Index? Explain its different types.
+   A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations
+    accessing data from a database table at the cost of additional writes and memory to maintain the index data structure
+Unique and Non-Unique Index:
+Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values.
+ Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
+
+ Q: Clustered and Non-Clustered Index:
+ Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
+
+The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.
+
+Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database.
+
+Q: What is the difference between Clustered and Non-clustered index?
+Clustered index modifies the way records are stored in a database based on the indexed column. A non-clustered index creates a separate entity within the table which references the original table.
+Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
+In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
+
+Q: What is Data Integrity
+Data Integrity is the assurance of accuracy and consistency of data over its entire life-cycle and is a critical aspect of the design, implementation, and usage of any system which stores, processes, or retrieves data. 
+It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database
+
+Q: What are Entities and Relationships
+Q: List the different types of relationships in SQL.
+Examples: 
