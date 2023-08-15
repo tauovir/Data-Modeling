@@ -1,5 +1,8 @@
 Q: What are Constraints in SQL?
-Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:
+Constraints are used to specify the rules concerning data in the table. It can be applied for single or
+ multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command.
+ Constraints ensure data integrity in a table and block undesired actions
+  The constraints are:
 
 NOT NULL - Restricts NULL value from being inserted into a column.
 CHECK - Verifies that all values in a field satisfy a condition.
@@ -42,3 +45,97 @@ It also defines integrity constraints to enforce business rules on the data when
 Q: What are Entities and Relationships
 Q: List the different types of relationships in SQL.
 Examples: 
+
+What are DDL and DML
+Data Definition Language (DDL) – to define and modify the structure of a database.
+DDL: CREATE, ALTER TABLE, DROP, TRUNCATE, and ADD COLUMN
+Data Manipulation Language (DML) – to access, manipulate, and modify data in a database.
+DML: UPDATE, DELETE, and INSERT
+
+What is a subquery?
+Also called an inner query; a query placed inside another query, or an outer query. A subquery may occur in the clauses such as SELECT, FROM, WHERE, UPDATE, etc.
+
+What is a foreign key?
+A column (or multiple columns) of a table to which the FOREIGN KEY constraint was imposed to link this column to the primary key 
+in another table (or several tables). The purpose of foreign keys is to keep connected various tables of a database.
+
+What is a schema?
+A collection of database structural elements such as tables, stored procedures, indexes, functions, and triggers.
+ It shows the overall database architecture, specifies the relationships between various objects of a database,
+  and defines different access permissions for them.
+
+What is NULL value? How is it different from zero or a blank space?
+A NULL value indicates the absence of data for a certain cell of a table. Instead, zero is a valid numeric value, and an empty string is a legal string of zero length.
+
+What is a function in SQL, and why use functions?
+A database object representing a set of SQL statements frequently used for a certain task.
+ A function takes in some input parameters, performs calculations or other manipulations on them, and returns the result.
+  Functions help improve code readability and avoid repetition of the same code snippets.
+
+Aggregate functions – work on multiple, usually grouped records for the provided columns of a table, and return a single value (usually by group).
+Scalar functions – work on each individual value and return a single value.
+
+What aggregate functions do you know?
+AVG() – returns the average value
+SUM() – returns the sum of values
+MIN() – returns the minimum value
+MAX() – returns the maximum value
+COUNT() – returns the number of rows, including those with null values
+FIRST() – returns the first value from a column
+LAST()– returns the last value from a column
+
+What scalar functions do you know?
+LEN() (in other SQL flavors – LENGTH()) – returns the length of a string, including the blank spaces
+UCASE() (in other SQL flavors – UPPER()) – returns a string converted to the upper case
+LCASE() (in other SQL flavors – LOWER()) – returns a string converted to the lower case
+INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)
+MID() (in other SQL flavors – SUBSTR()) – extracts a substring from a string
+ROUND() – returns the numerical value rounded to a specified number of decimals
+NOW() – returns the current date and time
+
+What are character manipulation functions? Give some examples.
+Character manipulation functions represent a subset of character functions, and they're used to modify the text data.
+
+CONCAT() – joins two or more string values appending the second string to the end of the first one
+SUBSTR() – returns a part of a string satisfying the provided start and end points
+LENGTH() (in other SQL flavors – LEN()) – returns the length of a string, including the blank spaces
+REPLACE() – replaces all occurrences of a defined substring in a provided string with another substring
+INSTR() – returns the numeric position of a defined substring in a provided string
+LPAD() and RPAD() – return the padding of the left-side/right-side character for right-justified/left-justified value
+TRIM() – removes all the defined characters, as well as white spaces, from the left, right, or both ends of a provided string
+
+What is a view, and why use it?
+A virtual table containing a subset of data retrieved from one or more database tables (or other views). 
+Views take very little space, simplify complex queries, limit access to the data for security reasons, enable data independence,
+ and summarize data from multiple tables.
+
+Can we create a view based on another view?
+Yes. This is also known as nested views. However,
+ we should avoid nesting multiple views since the code becomes difficult to read and debug.
+
+ Can we still use a view if the original table is deleted?
+ No. Any views based on that table will become invalid after deleting the base table. If we try to use such a view anyway, we'll receive an error message.
+
+ What types of SQL relationships do you know?
+ One-to-one – each record in one table corresponds to only one record in another table
+One-to-many – each record in one table corresponds to several records in another table
+Many-to-many – each record in both tables corresponds to several records in another table
+
+What is normalization in SQL, and why use it?
+Normalization is a process of database design that includes organizing and restructuring data in a way to reduce data redundancy, dependency, duplication, and inconsistency. This leads to enhanced data integrity, more tables within the database, more efficient data access and security control, and greater query flexibility.
+
+What is denormalization in SQL, and why use it?
+Denormalization is the process opposite of normalization: it introduces data redundancy and combines data from multiple tables. Denormalization optimizes the performance of the database infrastructure in situations when read operations are more important than write operations since it helps avoid complex joins and reduces the time of query running.
+
+
+What is the difference between the DELETE and TRUNCATE statements?
+DELETE is a reversible DML (Data Manipulation Language) command used to delete one or more rows from a table based on the conditions specified in the WHERE clause. Instead, TRUNCATE is an irreversible DDL (Data Definition Language) command used to delete all rows from a table. DELETE works slower than TRUNCATE. Also, we can't use the TRUNCATE statement for a table containing a foreign key.
+
+What is the difference between the DROP and TRUNCATE statements?
+DROP deletes a table from the database completely, including the table structure and all the associated constraints, relationships with other tables, and access privileges. TRUNCATE deletes all rows from a table without affecting the table structure and constraints. DROP works slower than TRUNCATE. Both are irreversible DDL (Data Definition Language) commands.
+
+What is the difference between the HAVING and WHERE statements?
+
+The first one works on aggregated data after they are grouped, while the second one checks each row individually. If both statements are present in a query, they appear in the following order: WHERE – GROUP BY – HAVING. The SQL engine interprets them also in the same order.
+
+
