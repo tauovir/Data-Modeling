@@ -1,7 +1,7 @@
 1: Created account:
 	User: roman
 	pass : Ignou@555355
-	url: https://app.snowflake.com/ap-southeast-1/ze27408/worksheets
+	url: 	 https://mxlqjph-de12569.snowflakecomputing.com
 	
 	Snowsql:
 	Install Snowsql client:
@@ -13,3 +13,5 @@ cd ..
 type command "snowsql"
 
 select current_version();	
+
+https://learnsql.com/blog/lead-and-lag-functions-in-sql/

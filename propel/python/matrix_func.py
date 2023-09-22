@@ -5,20 +5,32 @@ MATRIX = [
         ]
 
 def flatten():
-    # output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    """
+    Flatten the matrix
+    output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    """
+    # 
     pass
 
 def row_addtion():
-    # list comprehension
-    # output:[6, 15, 24]
+    """
+    Perform the row wise addition using list comprehension
+    output: [6, 15, 24]
+    """
     pass
 
 def row_reverse():
-    # Result: [[3, 2, 1], [6, 5, 4], [9, 8, 7]]
+    """
+    Reverse the row element of Matrix
+    output: [[3, 2, 1], [6, 5, 4], [9, 8, 7]]
+    """
     pass
 
 def col_addtion():
-    # output: [12, 15, 18]
+    """
+    Perform the column wise addition using list comprehension
+    output: [12, 15, 18]
+    """
     pass
 
 
